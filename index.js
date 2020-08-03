@@ -32,4 +32,4 @@ const moment = require('moment');
 // console.log(moment().format("MMM Do YYYY"));
 
 // use brackets to add custom words
-console.log(moment('10-16-1989').format('dddd [the] Do [of] MMMM [in the year] YYYY'));
+console.log(moment('05-09-1984').format('dddd [the] Do [of] MMMM [in the year] YYYY'));
