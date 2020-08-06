@@ -27,11 +27,9 @@ explore npmjs for great npms to expirament trhough your js files and log though 
 var oneLinerJoke = require('one-liner-joke');
 var getRandomJoke = oneLinerJoke.getRandomJoke();
 ```
-## Puttin both the foodlist and custom Npm together
 
-# NODE AND EXPRESS README 
 
-## CREATING A NEW NODE PROJECT
+# CREATING A NEW NODE PROJECT
 Create a new folder in your project directory through terminal
 ```
 mkdir node-proj
@@ -41,7 +39,7 @@ Make sure that you are in the project folder and type the following in the promp
 ```
 npm init -y
 ```
-the `-y` added to `npm init`, allows you to select the defalt values for the `packsgae.json` files
+The `-y` added to `npm init`, allows you to select the defalt values for the `packsgae.json` files
 
 ## Create an index.js file
 Make sure you are in the project folder and use the touch command.
@@ -57,7 +55,7 @@ code .
 ```js
 console.log('Hello')
 ```
-test your file out in terminal with
+Test your file out in terminal with
 ```
 node idex.js
 ```
@@ -70,17 +68,17 @@ de to export
 ```js
 module.exports.beBasic = () => "That's so fetch!"
 ```
-this line of code adds a key value pair to our module.exports object.
+This line of code adds a key value pair to our module.exports object.
 
-then in your index.js file add  import your module
+Then in your index.js file add  import your module
 ```js
 const myModule = require('./Module.js');
 
 console.log(myModule.beBasic());
 ```
-the `require`function takes one path to the file that contains the the modules you are exporting.
+The `require`function takes one path to the file that contains the the modules you are exporting.
 
-now, in the console, run 
+Now, in the console, run 
 ```
 node index.js
 ```
@@ -97,20 +95,20 @@ NPM is the largest open-source software registry in the world. It includes a web
 
 ## NPMs I have used
 ### Nodemon
-nodemonis a package manager thaat restarts the application everytime you sav changes to your node. to istall type the following in the comand line:
+Nodemon is a package manager thaat restarts the application everytime you sav changes to your node. to istall type the following in the comand line:
 ```
 npm i -g nodemon
 ```
 -g allows to install nodemon globally so it doesnt matter what directory we are in.
 
 ### Moment
-moment is a date formatting module.
+Moment is a date formatting module.
 to istall type in command:
 ```
 npm i moment
 ```
 ### one-liner-joke
-a funny 3rd party Node Module which can provide one line joke randomly or from specific tag
+A funny third party Node Module which can provide one line joke randomly or from specific tag
 
 This module contains more than 2200 one line jokes.
 
@@ -139,7 +137,7 @@ npm i express
 touch index.js
 ```
 ### import the express module
-in the the index.js
+In the the index.js
 ```js
 const express = require('express');
 ```
@@ -178,7 +176,7 @@ app.get('/', function(req, res) {
 
 app.listen(8000);
 ```
-then run nodemon
+Then run nodemon
 ### Examples of request
 ```js
 app.get('/greet/:name', (req, res)=>{
@@ -272,7 +270,7 @@ index.js
 ```
 npm install express-ejs-layouts
 ```
-require the module to add layouts
+Require the module to add layouts
 ```js
 var express = require('express');
 var app = express();
