@@ -94,7 +94,9 @@ NPM is the largest open-source software registry in the world. It includes a web
 
 
 ## NPMs I have used
+
 ### Nodemon
+
 Nodemon is a package manager thaat restarts the application everytime you sav changes to your node. to istall type the following in the comand line:
 ```
 npm i -g nodemon
@@ -102,18 +104,21 @@ npm i -g nodemon
 -g allows to install nodemon globally so it doesnt matter what directory we are in.
 
 ### Moment
+
 Moment is a date formatting module.
 to istall type in command:
 ```
 npm i moment
 ```
 ### one-liner-joke
+
 A funny third party Node Module which can provide one line joke randomly or from specific tag
 
 This module contains more than 2200 one line jokes.
 
 
 ## Express
+
 Express is a light-weight, web application framework for writing Restful APIs in Node.js.
 
 
@@ -149,7 +154,8 @@ const app = express();
 ```
 
 
-### routes
+### Routes
+
 A route is a combination of a URL pattern and HTTP Verb.
 
 In our express project 
@@ -157,6 +163,7 @@ In our express project
 ## The Request and Response Objects
 
 ### Request
+
 The Request object, frequently abbreviated to req, contains all the data we would ever need about the actual request that came in. What are they requesting? What browser are they using? Bunches of other stuff. But mostly we will using three keys inside of it:
 
 ### Respone
@@ -166,6 +173,7 @@ The Response object, or res for short, is what we use to send something back to 
 ### Example of Route
 
 in index.js
+
 ```js
 const express = require('express');
 const app = express();
@@ -177,6 +185,8 @@ app.get('/', function(req, res) {
 app.listen(8000);
 ```
 Then run nodemon
+
+
 ### Examples of request
 ```js
 app.get('/greet/:name', (req, res)=>{
@@ -194,6 +204,7 @@ app.get('/add/:x:y', (req, res)=>{
 Writing text to a web page using res.send(), each page will display different HTML, we'll have several HTML files, or `views`.
 
 ### example of a views setup
+
 ```js
 app.get('/', function(req, res) {
   res.sendFile(__dirname+'/views/index.html');
@@ -214,20 +225,25 @@ npm install ejs
 set view to ejs
 ```js
 app.set('view engine', 'ejs');
+
 ```
 Rename your html files to ejs and relpace your res.send to res.render your route should look like this.
+
 ```js
 app.get('/', function(req, res) {
   res.render('index.ejs');
 });
 ```
+
 ## Templating with variable
 Create an object in index.js
+
 ```js
 app.get('/animals', function(req, res) {
     res.render('animals', {title: 'Hate Animals', animals: ['scorpions', 'spiders']})
   });
 ```
+
 Now you can embedd the tital variable into index.ejs
 
 ```html
@@ -242,7 +258,8 @@ Now you can embedd the tital variable into index.ejs
 ```
 <% %> tags embedd the JS
 
-## partials
+## Partials
+
 Partials
 Partials can be used to modularize views and reduce repetition.
 examples of partials
@@ -253,6 +270,7 @@ partial/header.js
     <img src="http://placekitten.com/500/500">
   </header>
 ```
+
 ```html
 index.js
 <!DOCTYPE html>
@@ -266,7 +284,8 @@ index.js
 
     <h1>Hello, <%= name %>!</h1>
 ```
-## INstall EJS layouts
+
+## Install EJS layouts
 ```
 npm install express-ejs-layouts
 ```
