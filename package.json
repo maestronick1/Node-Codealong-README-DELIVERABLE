@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/maestronick1/Node-Codealong#readme",
   "dependencies": {
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "one-liner-joke": "^1.2.0"
   }
 }
